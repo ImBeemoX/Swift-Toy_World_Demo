@@ -13,6 +13,7 @@
 		2144A3CC233762F100F37467 /* Toy_world.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2144A3CA233762F100F37467 /* Toy_world.xcdatamodeld */; };
 		2144A3CE233762F200F37467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2144A3CD233762F200F37467 /* Assets.xcassets */; };
 		2144A3D1233762F200F37467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2144A3CF233762F200F37467 /* LaunchScreen.storyboard */; };
+		216734542339171D00D651C7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216734532339171D00D651C7 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2144A3CD233762F200F37467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2144A3D0233762F200F37467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2144A3D2233762F200F37467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		216734532339171D00D651C7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 				2144A3C5233762F100F37467 /* ViewController.swift */,
 				2144A3C7233762F100F37467 /* Main.storyboard */,
 				2144A3CD233762F200F37467 /* Assets.xcassets */,
-				2144A3CF233762F200F37467 /* LaunchScreen.storyboard */,
 				2144A3D2233762F200F37467 /* Info.plist */,
 				2144A3CA233762F100F37467 /* Toy_world.xcdatamodeld */,
+				2144A3CF233762F200F37467 /* LaunchScreen.storyboard */,
+				216734532339171D00D651C7 /* TableViewCell.swift */,
 			);
 			path = "Toy world";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2144A3CC233762F100F37467 /* Toy_world.xcdatamodeld in Sources */,
+				216734542339171D00D651C7 /* TableViewCell.swift in Sources */,
 				2144A3C6233762F100F37467 /* ViewController.swift in Sources */,
 				2144A3C4233762F100F37467 /* AppDelegate.swift in Sources */,
 			);

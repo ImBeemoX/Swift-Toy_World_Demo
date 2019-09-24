@@ -14,6 +14,8 @@
 		2144A3CE233762F200F37467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2144A3CD233762F200F37467 /* Assets.xcassets */; };
 		2144A3D1233762F200F37467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2144A3CF233762F200F37467 /* LaunchScreen.storyboard */; };
 		216734542339171D00D651C7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216734532339171D00D651C7 /* TableViewCell.swift */; };
+		218D4D7D233A05EC006EAEFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4D7C233A05EB006EAEFF /* DetailViewController.swift */; };
+		218D4D7F233A1242006EAEFF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4D7E233A1242006EAEFF /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2144A3D0233762F200F37467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2144A3D2233762F200F37467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		216734532339171D00D651C7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		218D4D7C233A05EB006EAEFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		218D4D7E233A1242006EAEFF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		2144A3C2233762F100F37467 /* Toy world */ = {
 			isa = PBXGroup;
 			children = (
-				2144A3C3233762F100F37467 /* AppDelegate.swift */,
-				2144A3C5233762F100F37467 /* ViewController.swift */,
-				2144A3C7233762F100F37467 /* Main.storyboard */,
-				2144A3CD233762F200F37467 /* Assets.xcassets */,
+				218D4D7E233A1242006EAEFF /* Item.swift */,
 				2144A3D2233762F200F37467 /* Info.plist */,
-				2144A3CA233762F100F37467 /* Toy_world.xcdatamodeld */,
-				2144A3CF233762F200F37467 /* LaunchScreen.storyboard */,
-				216734532339171D00D651C7 /* TableViewCell.swift */,
+				218D4D83233A153B006EAEFF /* Objects */,
+				218D4D82233A1510006EAEFF /* Default Items */,
+				218D4D81233A14D8006EAEFF /* Views */,
+				218D4D80233A14B3006EAEFF /* StoryBoards */,
 			);
 			path = "Toy world";
+			sourceTree = "<group>";
+		};
+		218D4D80233A14B3006EAEFF /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2144A3C7233762F100F37467 /* Main.storyboard */,
+				2144A3CF233762F200F37467 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		218D4D81233A14D8006EAEFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				216734532339171D00D651C7 /* TableViewCell.swift */,
+				2144A3C5233762F100F37467 /* ViewController.swift */,
+				218D4D7C233A05EB006EAEFF /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		218D4D82233A1510006EAEFF /* Default Items */ = {
+			isa = PBXGroup;
+			children = (
+				2144A3C3233762F100F37467 /* AppDelegate.swift */,
+				2144A3CA233762F100F37467 /* Toy_world.xcdatamodeld */,
+				2144A3CD233762F200F37467 /* Assets.xcassets */,
+			);
+			path = "Default Items";
+			sourceTree = "<group>";
+		};
+		218D4D83233A153B006EAEFF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +181,9 @@
 			files = (
 				2144A3CC233762F100F37467 /* Toy_world.xcdatamodeld in Sources */,
 				216734542339171D00D651C7 /* TableViewCell.swift in Sources */,
+				218D4D7D233A05EC006EAEFF /* DetailViewController.swift in Sources */,
 				2144A3C6233762F100F37467 /* ViewController.swift in Sources */,
+				218D4D7F233A1242006EAEFF /* Item.swift in Sources */,
 				2144A3C4233762F100F37467 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

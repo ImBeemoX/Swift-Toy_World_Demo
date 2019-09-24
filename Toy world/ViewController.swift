@@ -31,9 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         cell.myImage.image = UIImage(named: items[indexPath.row].image)
-        cell.myImage.image?.scale
         cell.myPrice.text = String(items[indexPath.row].price) + "/Month"
         cell.myTitle.text = items[indexPath.row].title
+        
         
         return cell
         

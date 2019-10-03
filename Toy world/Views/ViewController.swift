@@ -36,9 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.myPrice.text = String(items[indexPath.row].price) + " / Month"
         cell.myTitle.text = items[indexPath.row].title
         
-        
         return cell
-        
     }
 
 

@@ -12,7 +12,7 @@ class CartViewController: UITableViewController  {
     
    
   
-    var item:Item!
+    static var items:[Item] = []
     
 
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class CartViewController: UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return CartViewController.items.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -31,11 +31,21 @@ class CartViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartViewCell
-        cell.myImage.image = UIImage(named: item.image)
-        cell.myPrice.text = String(item.price) + " / Month"
-        cell.myTitle.text = item.title
+        cell.myImage.image = UIImage(named: CartViewController.items[indexPath.row].image)
+        cell.myPrice.text = String(CartViewController.items[indexPath.row].price) + " / Month"
+        cell.myTitle.text = CartViewController.items[indexPath.row].title
         
         return cell
+    }
+    
+    //reload the data before the view is displayed
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+    }
+    
+    public func refresh(){
+        tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
     }
 
 }

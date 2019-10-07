@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
 
     @IBAction func AddToCardClicked(_ sender: Any) {
        let vc = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
-        vc.item = item
+        CartViewController.items.append(item!)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     var item:Item?
@@ -31,10 +31,10 @@ class DetailViewController: UIViewController {
         imgImage.image = UIImage(named: item!.image)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cart = segue.destination as! CartViewController
-        cart.item = item
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let cart = segue.destination as! CartViewController
+//        cart.item = item
+//    }
     
     
 

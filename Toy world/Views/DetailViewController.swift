@@ -14,6 +14,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
 
+    @IBAction func AddToCardClicked(_ sender: Any) {
+       let vc = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        vc.item = item
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     var item:Item?
     
     
@@ -24,9 +29,13 @@ class DetailViewController: UIViewController {
         lblTitle.text = item?.title
         lblPrice.text = String(item!.price) + " / Month"
         imgImage.image = UIImage(named: item!.image)
-        
-
-        // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cart = segue.destination as! CartViewController
+        cart.item = item
+    }
+    
+    
 
 }

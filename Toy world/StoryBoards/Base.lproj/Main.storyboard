@@ -168,6 +168,9 @@
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="29"/>
                                 <state key="normal" title="Add to cart"/>
+                                <connections>
+                                    <action selector="AddToCardClicked:" destination="sG7-Kb-cYH" eventType="touchUpInside" id="SaD-aX-kXG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-iP-OhG">
                                 <rect key="frame" x="118" y="649" width="178" height="48"/>
@@ -207,6 +210,7 @@
                         <outlet property="imgImage" destination="Yay-6m-5EA" id="Osn-d3-ReD"/>
                         <outlet property="lblPrice" destination="xco-rC-7pj" id="0gP-2q-feN"/>
                         <outlet property="lblTitle" destination="I1s-eQ-ohe" id="r5U-ZG-fCK"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="pass" id="jeR-an-HoH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SW-2s-9Om" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,14 +240,62 @@
         <!--Cart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Toy_world" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="CartViewController" id="BYZ-38-t0r" customClass="CartViewController" customModule="Toy_world" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="McG-b9-b5q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartCell" rowHeight="125" id="yff-LX-Eh3" customClass="CartViewCell" customModule="Toy_world" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="125"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yff-LX-Eh3" id="YJi-eK-ajR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-zJ-YRV">
+                                            <rect key="frame" x="0.0" y="0.0" width="226.5" height="125"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq3-C1-tlP">
+                                            <rect key="frame" x="284.5" y="20" width="55.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAx-Rv-BdE">
+                                            <rect key="frame" x="284.5" y="71" width="55.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="vUo-zJ-YRV" secondAttribute="bottom" id="Kov-ck-U1O"/>
+                                        <constraint firstItem="IAx-Rv-BdE" firstAttribute="top" secondItem="Iq3-C1-tlP" secondAttribute="bottom" constant="30" id="S7h-0m-WGc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="IAx-Rv-BdE" secondAttribute="trailing" constant="54" id="Vf5-DN-9OP"/>
+                                        <constraint firstItem="Iq3-C1-tlP" firstAttribute="top" secondItem="YJi-eK-ajR" secondAttribute="topMargin" constant="9" id="g4Y-wj-RN8"/>
+                                        <constraint firstItem="IAx-Rv-BdE" firstAttribute="leading" secondItem="vUo-zJ-YRV" secondAttribute="trailing" constant="58" id="i1G-aR-14x"/>
+                                        <constraint firstItem="Iq3-C1-tlP" firstAttribute="leading" secondItem="vUo-zJ-YRV" secondAttribute="trailing" constant="58" id="iMu-u8-K3i"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IAx-Rv-BdE" secondAttribute="bottom" constant="22" id="iSR-Jj-rjQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Iq3-C1-tlP" secondAttribute="trailing" constant="54" id="uIJ-3P-Xsy"/>
+                                        <constraint firstItem="vUo-zJ-YRV" firstAttribute="leading" secondItem="YJi-eK-ajR" secondAttribute="leading" id="ubJ-df-YgT"/>
+                                        <constraint firstItem="vUo-zJ-YRV" firstAttribute="top" secondItem="YJi-eK-ajR" secondAttribute="top" id="zAd-PZ-hwS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myImage" destination="vUo-zJ-YRV" id="vdb-j0-1fp"/>
+                                    <outlet property="myPrice" destination="IAx-Rv-BdE" id="4Mo-0z-m71"/>
+                                    <outlet property="myTitle" destination="Iq3-C1-tlP" id="GMF-VO-d10"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="P6T-Iu-0zo"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="pJI-ns-E6N"/>
+                        </connections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Cart" image="Cart" id="91R-48-a2Q"/>
+                    <navigationItem key="navigationItem" id="hlG-Ht-yq3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b24-da-FtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="800"/>
+            <point key="canvasLocation" x="646" y="808"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gnc-Ak-Rb2">
@@ -289,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYq-L1-FTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="800"/>
+            <point key="canvasLocation" x="1455" y="808"/>
         </scene>
         <!--Profile-->
         <scene sceneID="U2B-yk-MyX">
@@ -336,4 +388,7 @@
         <image name="Explore" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jeR-an-HoH"/>
+    </inferredMetricsTieBreakers>
 </document>

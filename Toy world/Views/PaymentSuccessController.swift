@@ -17,4 +17,13 @@ class PaymentSuccessController: UIViewController {
     }
     
 
+    @IBAction func isClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        // dismiss all child windows
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+           appDelegate.window?.rootViewController?.dismiss(animated: true, completion: nil)
+           (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
+        }
+    }
+   
 }

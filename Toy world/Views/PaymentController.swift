@@ -36,14 +36,15 @@ class PaymentController: UIViewController {
         
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
             let reason = "Identify yourself!"
-            
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (isIdentified, error) in
                 if isIdentified{
                     DispatchQueue.main.async {
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaymentSuccess")
-                        self.present(viewController, animated: true, completion: nil)
-                        CartViewController.items.remove(at: 0)
+                        //self.present(viewController, animated: true, completion: nil)
+                        self.show(viewController, sender: self)
+                        CartViewController.items.remove(at: CartViewController.itemIndex!)
                     }
+                    
                    
                 }else{
                     print("incorrect")

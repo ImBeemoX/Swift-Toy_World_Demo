@@ -11,7 +11,7 @@ import UIKit
 class CartViewController: UITableViewController  {
     
    
-  
+    static var itemIndex:Int?
     static var items:[Item] = []
     
 
@@ -27,6 +27,7 @@ class CartViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PaymentController") as! PaymentController
         vc.item = CartViewController.items[indexPath.row]
+        CartViewController.itemIndex = indexPath.row
         self.show(vc, sender: self)
     }
     

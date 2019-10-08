@@ -96,7 +96,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="mpR-qE-Uus"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -165,23 +165,24 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-oV-LSu">
                                 <rect key="frame" x="118" y="717" width="178" height="47"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="29"/>
                                 <state key="normal" title="Add to cart"/>
                                 <connections>
                                     <action selector="AddToCardClicked:" destination="sG7-Kb-cYH" eventType="touchUpInside" id="SaD-aX-kXG"/>
+                                    <segue destination="mkr-Ur-wvd" kind="show" id="MLI-fE-yo1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-iP-OhG">
                                 <rect key="frame" x="118" y="649" width="178" height="48"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Chat"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xco-rC-7pj">
                                 <rect key="frame" x="150" y="483" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -215,6 +216,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SW-2s-9Om" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1572.4637681159422" y="1445.7589285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NrF-Cb-2xM">
+            <objects>
+                <viewController id="mkr-Ur-wvd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PuN-3N-jyK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="2eP-kQ-hXa">
+                                <rect key="frame" x="56" y="134" width="290" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2eP-kQ-hXa" secondAttribute="height" multiplier="145:114" id="XMw-4R-fld"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item has been added to your cart!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-8q-mmI">
+                                <rect key="frame" x="7" y="478" width="400" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-DX-7uc">
+                                <rect key="frame" x="150" y="613" width="114" height="48"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View Cart"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="cL5-UQ-i1i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ig-gu-aeV" firstAttribute="trailing" secondItem="Cer-DX-7uc" secondAttribute="trailing" constant="150" id="5dH-Vg-8IZ"/>
+                            <constraint firstItem="1Ig-gu-aeV" firstAttribute="trailing" secondItem="YKg-8q-mmI" secondAttribute="trailing" constant="7" id="73f-1A-OkH"/>
+                            <constraint firstItem="2eP-kQ-hXa" firstAttribute="leading" secondItem="1Ig-gu-aeV" secondAttribute="leading" constant="56" id="CHg-sb-KsE"/>
+                            <constraint firstItem="1Ig-gu-aeV" firstAttribute="bottom" secondItem="Cer-DX-7uc" secondAttribute="bottom" constant="152" id="O5Z-ql-ta9"/>
+                            <constraint firstItem="1Ig-gu-aeV" firstAttribute="trailing" secondItem="2eP-kQ-hXa" secondAttribute="trailing" constant="68" id="few-i5-u1U"/>
+                            <constraint firstItem="YKg-8q-mmI" firstAttribute="top" secondItem="2eP-kQ-hXa" secondAttribute="bottom" constant="116" id="iuQ-qW-AbA"/>
+                            <constraint firstItem="Cer-DX-7uc" firstAttribute="leading" secondItem="1Ig-gu-aeV" secondAttribute="leading" constant="150" id="miC-22-foI"/>
+                            <constraint firstItem="Cer-DX-7uc" firstAttribute="top" secondItem="YKg-8q-mmI" secondAttribute="bottom" constant="106" id="sP4-We-8Mb"/>
+                            <constraint firstItem="YKg-8q-mmI" firstAttribute="leading" secondItem="1Ig-gu-aeV" secondAttribute="leading" constant="7" id="vLZ-AF-Z7U"/>
+                            <constraint firstItem="2eP-kQ-hXa" firstAttribute="top" secondItem="1Ig-gu-aeV" secondAttribute="top" constant="46" id="zR6-Al-C3L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ig-gu-aeV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IYp-B7-ReX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppp-uI-hrV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1572.4637681159422" y="2154.9107142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aPb-ck-vPL">
@@ -299,7 +350,6 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Cart" image="Cart" id="91R-48-a2Q"/>
-                    <navigationItem key="navigationItem" id="hlG-Ht-yq3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,5 +441,9 @@
         <image name="Chat" width="25" height="25"/>
         <image name="Explore" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="success" width="225" height="225"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cL5-UQ-i1i"/>
+    </inferredMetricsTieBreakers>
 </document>

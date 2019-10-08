@@ -17,6 +17,8 @@ class CartViewController: UITableViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // add observer
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name("doRefresh"), object: nil)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,15 +52,18 @@ class CartViewController: UITableViewController  {
             refresh()
         }
     }
+
+    
     
     //reload the data before the view is displayed
     override func viewWillAppear(_ animated: Bool) {
         refresh()
     }
     
-    public func refresh(){
+    @objc public func refresh(){
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing()
     }
+  
 
 }

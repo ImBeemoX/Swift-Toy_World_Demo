@@ -24,6 +24,7 @@ class PaymentSuccessController: UIViewController {
            appDelegate.window?.rootViewController?.dismiss(animated: true, completion: nil)
            (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
         }
+        NotificationCenter.default.post(name: Notification.Name("doRefresh"), object: nil)
     }
    
 }

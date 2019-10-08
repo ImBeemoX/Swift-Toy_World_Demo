@@ -2,7 +2,7 @@
 //  TableViewCell.swift
 //  Toy world
 //
-//  Created by 王一川 on 24/9/19.
+//  Created by Yichuan Wang on 24/9/19.
 //  Copyright © 2019 Wang Yichuan. All rights reserved.
 //
 

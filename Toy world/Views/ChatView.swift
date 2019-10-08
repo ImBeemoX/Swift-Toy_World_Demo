@@ -2,7 +2,7 @@
 //  ChatView.swift
 //  Toy world
 //
-//  Created by 王一川 on 3/10/19.
+//  Created by Yichuan Wang on 3/10/19.
 //  Copyright © 2019 Wang Yichuan. All rights reserved.
 //
 

@@ -19,6 +19,7 @@
 		218D4D7F233A1242006EAEFF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4D7E233A1242006EAEFF /* Item.swift */; };
 		21C721DA234AF9AF00E03C86 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C721D9234AF9AF00E03C86 /* CartViewController.swift */; };
 		21C721DC234B043F00E03C86 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C721DB234B043F00E03C86 /* CartViewCell.swift */; };
+		21FC92A8234C6A1100575EDB /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FC92A7234C6A1100575EDB /* PaymentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		218D4D7E233A1242006EAEFF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		21C721D9234AF9AF00E03C86 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		21C721DB234B043F00E03C86 /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
+		21FC92A7234C6A1100575EDB /* PaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				215E7B462345C93C003F259C /* ChatView.swift */,
 				21C721D9234AF9AF00E03C86 /* CartViewController.swift */,
 				21C721DB234B043F00E03C86 /* CartViewCell.swift */,
+				21FC92A7234C6A1100575EDB /* PaymentController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FC92A8234C6A1100575EDB /* PaymentController.swift in Sources */,
 				2144A3CC233762F100F37467 /* Toy_world.xcdatamodeld in Sources */,
 				216734542339171D00D651C7 /* TableViewCell.swift in Sources */,
 				218D4D7D233A05EC006EAEFF /* DetailViewController.swift in Sources */,

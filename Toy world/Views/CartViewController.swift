@@ -23,10 +23,11 @@ class CartViewController: UITableViewController  {
         return CartViewController.items.count
     }
     
+    //if cell is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        vc.item = items[indexPath.row]
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PaymentController") as! PaymentController
+        vc.item = CartViewController.items[indexPath.row]
+        self.show(vc, sender: self)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,8 +46,8 @@ class CartViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             CartViewController.items.remove(at: indexPath.row)
+            refresh()
         }
-        refresh()
     }
     
     //reload the data before the view is displayed

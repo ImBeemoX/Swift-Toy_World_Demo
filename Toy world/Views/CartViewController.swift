@@ -32,10 +32,21 @@ class CartViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartViewCell
         cell.myImage.image = UIImage(named: CartViewController.items[indexPath.row].image)
-        cell.myPrice.text = String(CartViewController.items[indexPath.row].price) + " / Month"
+        cell.myPrice.text = "$" + String(CartViewController.items[indexPath.row].price)
         cell.myTitle.text = CartViewController.items[indexPath.row].title
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            CartViewController.items.remove(at: indexPath.row)
+        }
+        refresh()
     }
     
     //reload the data before the view is displayed

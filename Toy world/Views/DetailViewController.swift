@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  Toy world
 //
-//  Created by 王一川 on 24/9/19.
+//  Created by Yichuan Wang on 24/9/19.
 //  Copyright © 2019 Wang Yichuan. All rights reserved.
 //
 
@@ -15,9 +15,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblPrice: UILabel!
 
     @IBAction func AddToCardClicked(_ sender: Any) {
-       let vc = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        _ = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
         CartViewController.items.append(item!)
-        self.navigationController?.pushViewController(vc, animated: true)
+        //self.navigationController?.pushViewController(vc, animated: true)
     }
     var item:Item?
     

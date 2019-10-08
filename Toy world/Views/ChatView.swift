@@ -27,6 +27,8 @@ class ChatView: UICollectionView {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
     }
+    
+    
 
 }
 

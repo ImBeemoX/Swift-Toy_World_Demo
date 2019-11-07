@@ -480,39 +480,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVR-Qo-R87">
-                                <rect key="frame" x="127" y="388" width="138" height="57"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cF9-9S-ppA">
+                                <rect key="frame" x="0.0" y="88" width="187" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="1b8-fr-8KN" kind="show" id="Kuo-Xa-NnX"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ2-h7-T71">
+                                <rect key="frame" x="248" y="162" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.9776800274848938" green="0.36913248896598816" blue="0.018300442025065422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="AJA-FL-xX6"/>
                     </view>
                     <navigationItem key="navigationItem" id="xb9-yD-NUk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b24-da-FtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="761"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gnc-Ak-Rb2">
-            <objects>
-                <viewController id="1b8-fr-8KN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YGP-OJ-u6r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Od8-d6-4o0"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cYq-L1-FTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1745" y="1446"/>
+            <point key="canvasLocation" x="1744.9275362318842" y="760.71428571428567"/>
         </scene>
         <!--Profile-->
         <scene sceneID="U2B-yk-MyX">
@@ -558,6 +545,7 @@
         <image name="Chat" width="25" height="25"/>
         <image name="Explore" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="62"/>
         <image name="success" width="225" height="225"/>
     </resources>
 </document>
